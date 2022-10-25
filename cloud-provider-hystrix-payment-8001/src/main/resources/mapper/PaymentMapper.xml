@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.mapper.PaymentMapper">
+
+    <select id="GetPaymentById" resultType="Payment">
+        SELECT  * from  `user-payment`.payment where id = #{id}
+    </select>
+    <select id="GetPaymentByLimit" resultType="Payment">
+        SELECT  * from  `user-payment`.payment
+                  where id between  ${Page * limit} and  ${Page+1 * limit}
+    </select>
+</mapper>
