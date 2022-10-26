@@ -11,6 +11,7 @@ public class test {
     public String Test() throws InterruptedException {
         TimeUnit.SECONDS.sleep(5);
         System.out.println("test");
+        System.out.println("test2-commit");
         return "test";
     }
 }
