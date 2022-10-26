@@ -10,6 +10,7 @@ public class test {
     @GetMapping("/test/TimeOut")
     public String Test() throws InterruptedException {
         TimeUnit.SECONDS.sleep(5);
+        System.out.println("test");
         return "test";
     }
 }
